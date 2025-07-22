@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candle Walla - Home</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><h1>Candle Walla 📈</h1><nav><a href="index.html">Home</a><a href="ai.html">AI Prediction</a><a href="learn.html">Learn</a><a href="about.html">About</a></nav></header>
+<section id="chart-container">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_live"></div>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script>
+    new TradingView.widget({
+      "width": "100%",
+      "height": 500,
+      "symbol": "NSE:NIFTY",
+      "interval": "15",
+      "timezone": "Asia/Kolkata",
+      "theme": "dark",
+      "style": "1",
+      "locale": "en",
+      "container_id": "tradingview_live"
+    });
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</section>
+<section id="ai-box"><h2>🔮 AI Prediction</h2><div id="prediction-output">Loading...</div></section>
+<script src="ai-predictor.js"></script><script src="script.js"></script></body></html>

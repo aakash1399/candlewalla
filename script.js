@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', () => { document.getElementById('prediction-output').innerText = '📈 Prediction: UP +120 pts\n🧠 Pattern: Bullish Engulfing\n🔒 Confidence: 86%'; });
