@@ -1,1 +1,59 @@
-<!DOCTYPE html><html><head><title>About</title></head><body><h1>About Candle Walla</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candlewalla - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Candlewalla</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" data-en="Home" data-hi="होम">Home</a></li>
+                    <li><a href="ai.html" data-en="AI Prediction" data-hi="एआई भविष्यवाणी">AI Prediction</a></li>
+                    <li><a href="learn.html" data-en="Learn" data-hi="सीखें">Learn</a></li>
+                    <li><a href="about.html" data-en="About" data-hi="हमारे बारे में">About</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                    <span class="theme-label" data-en="Dark Mode" data-hi="डार्क मोड">Dark Mode</span>
+                </div>
+                <div class="language-switch-wrapper">
+                    <select id="language-selector" class="lang-selector">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="container">
+            <h2 data-en="Your Gateway to Market Insights" data-hi="बाजार की जानकारी का आपका प्रवेश द्वार">Your Gateway to Market Insights</h2>
+            <p data-en="Candlewalla helps you understand market trends and make informed decisions with AI-powered predictions and educational resources." data-hi="कैंडलवाला आपको एआई-संचालित भविष्यवाणियों और शैक्षिक संसाधनों के साथ बाजार के रुझानों को समझने और सूचित निर्णय लेने में मदद करता है।">Candlewalla helps you understand market trends and make informed decisions with AI-powered predictions and educational resources.</p>
+            <a href="ai.html" class="btn" data-en="Get AI Prediction" data-hi="एआई भविष्यवाणी प्राप्त करें">Get AI Prediction</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Candlewalla. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
