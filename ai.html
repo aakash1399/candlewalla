@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candlewalla - AI Prediction</title>
+    <title data-en="AI Prediction">AI Prediction</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.umd.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">Candlewalla</h1>
+            <a href="index.html" class="logo">Candlewalla</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
-                    <li><a href="ai.html" class="active" data-en="AI Prediction" data-hi="एआई भविष्यवाणी">AI Prediction</a></li>
-                    <li><a href="learn.html" data-en="Learn" data-hi="सीखें">Learn</a></li>
-                    <li><a href="about.html" data-en="About" data-hi="हमारे बारे में">About</a></li>
+                    <li><a href="index.html" data-en="Home">Home</a></li>
+                    <li><a href="ai.html" class="active" data-en="AI Prediction">AI Prediction</a></li>
+                    <li><a href="learn.html" data-en="Learn">Learn</a></li>
+                    <li><a href="about.html" data-en="About">About</a></li>
                 </ul>
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                    <span class="theme-label" data-en="Dark Mode" data-hi="डार्क मोड">Dark Mode</span>
-                </div>
-                <div class="language-switch-wrapper">
-                    <select id="language-selector" class="lang-selector">
-                        <option value="en">English</option>
-                        <option value="hi">हिन्दी</option>
-                    </select>
-                </div>
             </nav>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em data-en="Dark Mode" class="theme-label">Dark Mode</em>
+            </div>
+            <div class="language-switch-wrapper">
+                <select id="language-selector" class="lang-selector">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -42,13 +41,18 @@
     </header>
 
     <main class="ai-prediction-page">
-        <div class="container">
-            <h2 data-en="AI-Powered Candlestick Prediction" data-hi="एआई-संचालित कैंडलस्टिक भविष्यवाणी">AI-Powered Candlestick Prediction</h2>
+        <section class="hero-section">
+            <div class="container">
+                <h2 data-en="AI-Powered Candlestick Prediction">AI-Powered Candlestick Prediction</h2>
+                <p data-en="Select a stock below to see real-time simulated data and AI-generated predictions based on candlestick patterns.">Select a stock below to see real-time simulated data and AI-generated predictions based on candlestick patterns.</p>
+            </div>
+        </section>
 
+        <section class="container">
             <div class="stock-selector-container">
-                <label for="stock-select" data-en="Select Stock:" data-hi="स्टॉक चुनें:">Select Stock:</label>
+                <label for="stock-select" data-en="Select Stock:">Select Stock:</label>
                 <select id="stock-select">
-                    <option value="NIFTY">NIFTY</option>
+                    <option value="NIFTY">NIFTY 50</option>
                     <option value="BANKNIFTY">BANKNIFTY</option>
                     <option value="RELIANCE">RELIANCE</option>
                     <option value="TCS">TCS</option>
@@ -61,41 +65,41 @@
             </div>
 
             <div class="prediction-output">
-                <h3 data-en="AI Prediction" data-hi="एआई भविष्यवाणी">AI Prediction</h3>
+                <h3 data-en="AI Prediction Label">AI Prediction</h3>
                 <div class="prediction-box">
-                    <p id="prediction-status">
-                        <span class="prediction-label" data-en="Pattern:" data-hi="पैटर्न:">Pattern:</span> <span id="predicted-pattern">Analyzing...</span><br>
-                        <span class="prediction-label" data-en="Direction:" data-hi="दिशा:">Direction:</span> <span id="predicted-direction">...</span><br>
-                        <span class="prediction-label" data-en="Move:" data-hi="मूव:">Move:</span> <span id="predicted-points">...</span><br>
-                        <span class="prediction-label" data-en="Confidence:" data-hi="आत्मविश्वास:">Confidence:</span> <span id="predicted-confidence">...</span>
-                    </p>
+                    <p><span class="prediction-label" data-en="Pattern:">Pattern:</span> <span id="predicted-pattern">Analyzing...</span></p>
+                    <p><span class="prediction-label" data-en="Direction:">Direction:</span> <span id="predicted-direction">...</span></p>
+                    <p><span class="prediction-label" data-en="Move:">Move:</span> <span id="predicted-points">...</span></p>
+                    <p><span class="prediction-label" data-en="Confidence:">Confidence:</span> <span id="predicted-confidence">...</span></p>
                 </div>
             </div>
 
-            <div class="prediction-explanation-section">
-                <h3 data-en="How Candlewalla Predicts" data-hi="कैंडलवाला कैसे भविष्यवाणी करता है">How Candlewalla Predicts</h3>
-                <p data-en="Our AI analyzes real-time OHLC (Open, High, Low, Close) data using a set of known candlestick pattern rules. When a pattern is detected, it generates a prediction for the next candle's direction and estimated point movement." data-hi="हमारा एआई ज्ञात कैंडलस्टिक पैटर्न नियमों के एक सेट का उपयोग करके वास्तविक समय ओएचएलसी (ओपन, हाई, लो, क्लोज) डेटा का विश्लेषण करता है। जब एक पैटर्न का पता चलता है, तो यह अगली कैंडल की दिशा और अनुमानित बिंदु गति के लिए एक भविष्यवाणी उत्पन्न करता है।"></p>
-                <p data-en="Key patterns analyzed include Doji (uncertainty/reversal), Hammer (possible uptrend), Engulfing (strong reversal), and three consecutive Red Candles (downtrend)." data-hi="विश्लेषण किए गए प्रमुख पैटर्न में डोजी (अनिश्चितता/रिवर्सल), हैमर (संभावित अपट्रेंड), एनगल्फिंग (मजबूत रिवर्सल), और लगातार तीन लाल कैंडल (डाउनट्रेंड) शामिल हैं।"></p>
-            </div>
+            <section class="prediction-explanation-section">
+                <h3 data-en="How Candlewalla Predicts">How Candlewalla Predicts</h3>
+                <p data-en="Our AI analyzes real-time OHLC (Open, High, Low, Close) data using a set of known candlestick pattern rules. When a pattern is detected, it generates a prediction for the next candle's direction and estimated point movement.">Our AI analyzes real-time OHLC (Open, High, Low, Close) data using a set of known candlestick pattern rules. When a pattern is detected, it generates a prediction for the next candle's direction and estimated point movement.</p>
+                <p data-en="Key patterns analyzed include Doji (uncertainty/reversal), Hammer (possible uptrend), Engulfing (strong reversal), and three consecutive Red Candles (downtrend).">Key patterns analyzed include Doji (uncertainty/reversal), Hammer (possible uptrend), Engulfing (strong reversal), and three consecutive Red Candles (downtrend).</p>
+            </section>
 
-            <div class="company-insights-section">
-                <h3 data-en="Company Insights (Placeholder)" data-hi="कंपनी अंतर्दृष्टि (प्लेसहोल्डर)">Company Insights (Placeholder)</h3>
-                <p data-en="This section will feature real-time company news, historical performance, and future outlook. (Requires integration with external APIs for live data)." data-hi="इस खंड में वास्तविक समय कंपनी समाचार, ऐतिहासिक प्रदर्शन और भविष्य का दृष्टिकोण शामिल होगा। (लाइव डेटा के लिए बाहरी एपीआई के साथ एकीकरण की आवश्यकता है)।"></p>
+            <section class="company-insights-section">
+                <h3 data-en="Company Insights (Placeholder)">Company Insights (Placeholder)</h3>
+                <p data-en="This section will feature real-time company news, historical performance, and future outlook. (Requires integration with external APIs for live data).">This section will feature real-time company news, historical performance, and future outlook. (Requires integration with external APIs for live data).</p>
                 <ul>
-                    <li data-en="Latest News Headline 1..." data-hi="नवीनतम समाचार शीर्षक 1...">Latest News Headline 1...</li>
-                    <li data-en="Latest News Headline 2..." data-hi="नवीनतम समाचार शीर्षक 2...">Latest News Headline 2...</li>
+                    <li data-en="Latest News Headline 1...">Latest News Headline 1...</li>
+                    <li data-en="Latest News Headline 2...">Latest News Headline 2...</li>
                 </ul>
-            </div>
-        </div>
+            </section>
+
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Candlewalla. All rights reserved.</p>
+            <p>&copy; 2024 Candlewalla. All rights reserved. Disclaimer: For educational purposes only. Not financial advice.</p>
         </div>
     </footer>
 
-    <script src="ai-predictor.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.umd.js"></script>
+    <script src="ai-predictor.js"></script> <script src="script.js"></script>
 </body>
 </html>
+
