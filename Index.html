@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Candlewalla AI Tool</title>
+</head>
+<body>
+  <h2>📈 Upload Chart to Analyze</h2>
+  <form id="uploadForm">
+    <input type="file" id="chartImage" accept="image/*" required />
+    <button type="submit">Analyze</button>
+  </form>
+
+  <div id="result" style="margin-top:20px;"></div>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fileInput = document.getElementById('chartImage');
+      const file = fileInput.files[0];
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const apiUrl = 'https://your-replit-name.repl.co/analyze'; // Replace this
+
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await res.json();
+      document.getElementById('result').innerHTML = `
+        <strong>Pattern:</strong> ${data.pattern || 'No pattern detected'}<br/>
+        <strong>Entry:</strong> ${data.entry || '-'}<br/>
+        <strong>Stop Loss:</strong> ${data.stop_loss || '-'}<br/>
+        <strong>Target:</strong> ${data.target || '-'}<br/>
+        <em>${data.message || ''}</em>
+      `;
+    });
+  </script>
+</body>
+</html>
