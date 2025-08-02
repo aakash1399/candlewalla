@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candle Walla AI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Candle Walla – AI Live Candlestick Prediction</h1>
+        <div class="theme-toggle">🌙</div>
+    </header>
+
+    <main>
+        <section id="chart-container">
+            <!-- TradingView Chart Embed -->
+            <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_7b36f&symbol=NSE:NIFTY&interval=1&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=F1F3F6&studies=[]&theme=dark&style=1&timezone=Asia/Kolkata&studies_overrides={}" width="100%" height="400" frameborder="0" allowtransparency="true"></iframe>
+        </section>
+
+        <section id="prediction">
+            <h2>AI Prediction</h2>
+            <div id="ai-output">Loading prediction...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Candle Walla. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
